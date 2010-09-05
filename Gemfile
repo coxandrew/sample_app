@@ -1,22 +1,26 @@
+$heroku = ENV['USER'] ? !! ENV['USER'].match(/^repo\d+/) : ENV.any?{|key, _| key.match(/^HEROKU_/)}
+
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.0'
 gem 'sqlite3-ruby', '1.2.5', :require => 'sqlite3'
 
-group :development do
-  # gem 'rspec-rails', '2.0.0.beta.20'
-end
+unless $heroku
+  group :development do
+    # gem 'rspec-rails', '2.0.0.beta.20'
+  end
 
-group :test do
-  gem 'rspec', '2.0.0.beta.18'
-  gem 'rspec-rails', '2.0.0.beta.18'
+  group :test do
+    gem 'rspec', '2.0.0.beta.18'
+    gem 'rspec-rails', '2.0.0.beta.18'
 
-  # Need to run autotest with 'bundle exec autotest', so
-  # need to include these here
-  gem 'autotest'
-  gem 'autotest-rails'
-  gem 'autotest-growl'
-  gem 'autotest-fsevent'
+    # Need to run autotest with 'bundle exec autotest', so
+    # need to include these here
+    gem 'autotest'
+    gem 'autotest-rails'
+    gem 'autotest-growl'
+    gem 'autotest-fsevent'
+  end
 end
 
 # Use unicorn as the web server
