@@ -3,22 +3,20 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.0'
 gem 'sqlite3-ruby', '1.2.5', :require => 'sqlite3'
 
-if RUBY_PLATFORM =~ /darwin/
-  group :development do
-    # gem 'rspec-rails', '2.0.0.beta.20'
-  end
+group :development do
+end
 
-  group :test do
-    gem 'rspec', '2.0.0.beta.18'
-    gem 'rspec-rails', '2.0.0.beta.18'
+group :test do
+  gem 'rspec', '2.0.0.beta.18'
+  gem 'rspec-rails', '2.0.0.beta.18'
+  gem 'spork', '0.8.4'
 
-    # Need to run autotest with 'bundle exec autotest', so
-    # need to include these here
-    gem 'autotest'
-    gem 'autotest-rails'
-    gem 'autotest-growl'
-    gem 'autotest-fsevent'
-  end
+  # Need to run autotest with 'bundle exec autotest', so
+  # need to include these here
+  gem 'autotest'
+  gem 'autotest-rails'
+  gem 'autotest-growl'
+  gem 'autotest-fsevent'
 end
 
 # Use unicorn as the web server
