@@ -19,3 +19,9 @@ Autotest is configured in the `autotest/discover.rb` file. To run:
 ### Run tests
 
     $ rspec spec
+
+## Heroku
+
+Deploy to Heroku without test or development gems:
+
+    $ heroku config:add BUNDLE_WITHOUT="development test"
