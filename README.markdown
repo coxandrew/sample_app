@@ -25,3 +25,11 @@ Autotest is configured in the `autotest/discover.rb` file. To run:
 Deploy to Heroku without test or development gems:
 
     $ heroku config:add BUNDLE_WITHOUT="development test"
+
+## Parking Lot
+
+### .autotest
+
+Figure out how to add request specs to .autotest (there doesn't appear to be an .autotest file in my project directory). See chapter 5:
+
+http://ruby.railstutorial.org/chapters/filling-in-the-layout
