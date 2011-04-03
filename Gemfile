@@ -8,12 +8,12 @@ group :development do
   gem 'hirb'
   gem 'awesome_print', :require => 'ap'
   gem 'interactive_editor'
+  gem 'rspec-rails', '2.5.0'
 end
 
 group :test do
-  gem 'rspec', '2.0.0.beta.18'
-  gem 'rspec-rails', '2.0.0.beta.18'
-  gem 'spork', '0.8.4'
+  gem 'rspec', '2.5.0'
+  gem 'webrat', '0.7.1'
 
   # Need to run autotest with 'bundle exec autotest', so
   # need to include these here
